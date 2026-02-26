@@ -1,40 +1,26 @@
-# Core.Placement — короткий підсумок (aisummary)
+# AI Summary — Core.Placement
 
-## Призначення
-Модуль **Core.Placement** відповідає за **розміщення/видалення елементів (нод)** на ігровій сітці та за зберігання стану “що стоїть у якій клітинці”.
+## Purpose
+`Core.Placement` stores placement state on top of the grid and exposes event-driven hooks for scene systems.
 
-Модуль **не малює**, **не створює GameObject**, і **не знає нічого про UI** — лише чиста логіка та події.
+## Main types
+- `ElementType` (`Water`, `Fire`).
+- `NodeId` (typed wrapper over `int`).
+- `PlacedNode` (`Id`, `Type`, `Coord`).
+- `IPlacementService` (contract).
+- `PlacementService` (dictionary-backed implementation).
 
-## Що входить
-- `ElementType` — перелік типів елементів, які можна ставити на сітку.
-- `NodeId` — легкий ідентифікатор ноди (інкрементальний int).
-- `PlacedNode` — “снімок” розміщеної ноди: `Id`, `Type`, `Coord`.
-- `IPlacementService` — контракт сервісу розміщення (події + методи).
-- `PlacementService` — реалізація сервісу (in-memory словник за координатою).
+## Public contract
+- Events: `NodePlaced`, `NodeRemoved`.
+- Methods: `CanPlace`, `TryPlace`, `TryRemove`, `TryGet`.
 
-## Залежності
-- **Core.Grid**
-  - `GridCoord` — координата клітинки
-  - `IGrid` — перевірка меж сітки (`IsInside`)
+## Behavior
+- Placement is valid only when coord is inside `IGrid` bounds and currently empty.
+- Successful placement increments node ID and emits `NodePlaced`.
+- Successful removal emits `NodeRemoved`.
+- `Try*` APIs return `false` for expected invalid operations.
 
-## Основні правила
-- Ставити можна лише якщо:
-  1) координата всередині сітки (`_grid.IsInside`)
-  2) клітинка порожня (немає запису в `_byCoord`)
-- Видалення можливе лише якщо в клітинці щось є.
-
-## Події (реактивність)
-- `NodePlaced(PlacedNode)` — викликається після успішного `TryPlace`.
-- `NodeRemoved(PlacedNode)` — викликається після успішного `TryRemove`.
-
-> Ці події — “точки інтеграції” для UI/візуалізації/ефектів: інші модулі можуть підписатися і відмалювати/прибрати відповідні об’єкти.
-
-## API (коротко)
-- `bool CanPlace(GridCoord coord)`
-- `bool TryPlace(ElementType type, GridCoord coord, out PlacedNode node)`
-- `bool TryRemove(GridCoord coord, out PlacedNode removed)`
-- `bool TryGet(GridCoord coord, out PlacedNode node)`
-
-## Нотатки / edge cases
-- `NodeId` генерується інкрементально (`_nextId++`) і **не перевикористовується** після видалення.
-- Дані зберігаються в пам’яті в `Dictionary<GridCoord, PlacedNode>` (не серіалізуються самі по собі).
+## Cross-module links
+- Depends on `Core.Grid` (`GridCoord`, `IGrid`).
+- Instantiated in `Scenes.CompositionRoot`.
+- Consumed by `Gameplay.Placement.BuildModeController` (commands) and `Gameplay.Placement.NodeSpawner` (events).
