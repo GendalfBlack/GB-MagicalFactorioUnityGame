@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.Grid.GridDirections">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Assets\Core\Grid\GridDirections.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Grid.GridService" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACBAAAAAACAAAAAAMAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Grid\GridService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Settings" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Core.Placement.PlacementService" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAIAAAAAAAIAAAAAAgAQBAAABAAA=</HashCode>
+      <FileName>Assets\Core\Placement\PlacementService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_grid" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_byCoord" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="Core.Grid.GridCoord" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAEwAEAAAAAAAAAAIAAAAgAAAAAYiA=</HashCode>
+      <FileName>Assets\Core\Grid\GridCoord.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Core.Grid.GridRect">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAxBAIAAAAEAAAAAEAAAAAAAAAAAAAAAQAQAAA=</HashCode>
+      <FileName>Assets\Core\Grid\GridRect.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Core.Grid.GridSettings">
+    <Position X="5.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Core\Grid\GridSettings.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Bounds" />
+    </ShowAsAssociation>
+  </Struct>
+  <Struct Name="Core.Placement.NodeId" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAgAAAAAiA=</HashCode>
+      <FileName>Assets\Core\Placement\NodeId.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Struct>
+  <Struct Name="Core.Placement.PlacedNode">
+    <Position X="8.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAQQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Placement\PlacedNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Coord" />
+      <Field Name="Id" />
+      <Field Name="Type" />
+    </ShowAsAssociation>
+  </Struct>
+  <Interface Name="Core.Grid.IGrid">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACBAAAAAACAAAAAAMAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Grid\IGrid.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Settings" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Core.Placement.IPlacementService">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAQBAAABAAA=</HashCode>
+      <FileName>Assets\Core\Placement\IPlacementService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Core.Placement.ElementType">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Core\Placement\ElementType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

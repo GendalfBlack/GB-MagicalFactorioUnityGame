@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Gameplay.Grid.GridGizmosRenderer">
+    <Position X="7" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Gameplay\Grid\GridGizmosRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gameplay.Input.MouseWorld">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Gameplay\Input\MouseWorld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gameplay.Placement.BuildModeController">
+    <Position X="0.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQEBAAAJAAEAAAAAAAgAAAAAAAAAAAAAAAACgEAAEA=</HashCode>
+      <FileName>Assets\Gameplay\Placement\BuildModeController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="playerProbe" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Gameplay.Placement.NodeSpawner">
+    <Position X="8.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAACAAAABAAAAAgAACAAAAAAIAIAAAAAAAACEE=</HashCode>
+      <FileName>Assets\Gameplay\Placement\NodeSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gameplay.Placement.NodeView">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Gameplay\Placement\NodeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gameplay.Player.PlayerController2D">
+    <Position X="3.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Gameplay\Player\PlayerController2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gameplay.Player.PlayerGridProbe">
+    <Position X="3.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Gameplay\Player\PlayerGridProbe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
